@@ -188,7 +188,7 @@ async def periodic(interaction: discord.Interaction,element:str):
 
             
         except Exception as e:
-            await interaction.response.send_message(f"{element} is not in the periodic table, don't forget that the periodic table starts at 1 and ends at 118.")
+            await interaction.response.send_message(f"{element} is not in the periodic table, don't forget that the periodic table starts at 1 and ends at 118.", ephemeral=True)
 
 
 
@@ -244,7 +244,7 @@ async def periodic(interaction: discord.Interaction,element:str):
                 else :
                     i+=1
         except :
-            await interaction.response.send_message(f"{element} is not available in periodic table")
+            await interaction.response.send_message(f"{element} is not available in periodic table", ephemeral=True)
 
 
     else: #Otherwise, assuming that it's the english name of the element
@@ -301,7 +301,7 @@ async def periodic(interaction: discord.Interaction,element:str):
                 else :
                     i+=1
         except:
-            await interaction.response.send_message(f"{element} is not available in periodic table")
+            await interaction.response.send_message(f"{element} is not available in periodic table", ephemeral=True)
 @periodic.error
 async def on_periodic_error(interaction: discord.Interaction, error: app_commands.AppCommandError):
     if isinstance(error, app_commands.CommandOnCooldown):
@@ -411,7 +411,7 @@ async def github(interaction: discord.Interaction, repo: str):
         await interaction.response.send_message(embed=embed)
 
     except:
-        await interaction.response.send_message(f"Could not find {repo}")
+        await interaction.response.send_message(f"Could not find {repo}", ephemeral=True)
 
 @github.error
 async def on_github_error(interaction: discord.Interaction, error: app_commands.AppCommandError):
@@ -427,8 +427,8 @@ async def resistance(interaction: discord.Interaction, v:float, i:float):
     try:
         await interaction.response.send_message(f"With V = {v}, I = {i}         -->     R = {v/i}")
     
-    except Exception as e:
-        await interaction.response.send_message(f"Could not determine resistance, error : {e}")
+    except Exception:
+        await interaction.response.send_message(f"Could not determine resistance", ephemeral=True)
 @resistance.error
 async def on_resistance_error(interaction: discord.Interaction, error: app_commands.AppCommandError):
     if isinstance(error, app_commands.CommandOnCooldown):
@@ -583,10 +583,11 @@ async def resistance_color(interaction: discord.Interaction,number_of_lines:int,
 
         
         except Exception as e:
-            await interaction.response.send_message(f"Error : {e}")
+            await interaction.response.send_message(f"Errorn Fokon could not determine resistance by color_code", ephemeral=True)
 
     else:
-        await interaction.response.send_message("The number of lines is incorrect")
+        await interaction.response.send_message("The number of lines is incorrect", ephemeral=True)
+        
 @resistance_color.error
 async def on_resistance_color_error(interaction: discord.Interaction, error: app_commands.AppCommandError):
     if isinstance(error, app_commands.CommandOnCooldown):
