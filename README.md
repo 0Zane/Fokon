@@ -26,10 +26,6 @@ Fokon is an open source Discord bot created in Python for the Discord Buildathon
     - [How to Contribute](#how-to-contribute)
     - [Contribution Areas](#contribution-areas)
     - [Code Guidelines](#code-guidelines)
-  - [Roadmap](#roadmap)
-    - [General Improvements](#general-improvements)
-    - [Commands to Implement](#commands-to-implement)
-    - [Implemented Commands](#implemented-commands)
   - [License](#license)
   - [Acknowledgments](#acknowledgments)
 
