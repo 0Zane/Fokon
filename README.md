@@ -39,6 +39,12 @@ Fokon is a modular Discord bot that offers a collection of slash commands organi
 
 The bot uses the modern Discord API with slash commands and supports different categories of features ranging from educational quizzes to electronic calculation tools.
 
+
+
+https://github.com/user-attachments/assets/00d80a70-bc47-45c4-85f3-aca29dcfaa32
+
+
+
 ## Features
 
 **Educational Quizzes**
